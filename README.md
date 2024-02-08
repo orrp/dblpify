@@ -13,14 +13,15 @@ and handles rate limiting, caching, and [matching](#matching-heuristic).
 To install `dblpify`, you first need a working Python installation (e.g. [Miniconda](https://docs.anaconda.com/free/miniconda/)).
 Then, clone this repository and install the package:
 ```bash
-git clone ...
-pip install dblpify
+git clone https://github.com/orrp/dblpify
+cd dblpify
+pip install .
 ```
 
 ### Usage
 You can use `dblpify` directly from the command line. Here is a basic example:
 ```bash
-python run.py --bib_path references.bib
+python dblpify/run.py --bib_path references.bib
 ```
 By default, the output will be saved to the `output` directory, and will consist of two files:
 - `references_dblpified.bib`: The original .bib file with entries replaced by their dblp counterparts.
@@ -28,7 +29,7 @@ By default, the output will be saved to the `output` directory, and will consist
 
 Here are the full options:
 ```
-usage: dblpify.py [-h] [--bib_path BIB_PATH] [--out_path OUT_PATH] [--save_formatted] [--clear_cache] [--num_hits NUM_HITS] [--log_path LOG_PATH] [--dev]
+usage: run.py [-h] [--bib_path BIB_PATH] [--out_path OUT_PATH] [--save_formatted] [--clear_cache] [--num_hits NUM_HITS] [--log_path LOG_PATH] [--dev]
 
 options:
   -h, --help           show this help message and exit
@@ -66,7 +67,8 @@ Entries that are already from dblp are left unchanged.
 
 This heuristic may fail in some cases.
 For example, it will fail to match entries with incomplete titles, or typos in author names.
-For now, our approach is to minimize false matches and let the user complete the matching manually themselves.
+For now, our approach is to minimize false matches and let the user complete the matching manually themselves
+based on the report.
 
 ## Contributing
 
