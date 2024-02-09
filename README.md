@@ -1,3 +1,5 @@
+**Update: Use [rebiber](https://github.com/yuchenlin/rebiber) instead! It features more bibliographic sources and is
+actively maintained.**
 # dblpify
 > _dblpify (verb, transitive)_: The act of updating one's bibliography from the [dblp computer science bibliography](https://dblp.org) service.
 > - Etymology: From the [orphan initialism](https://dblp.org/faq/What+is+the+meaning+of+the+acronym+dblp.html) _dblp_ and the English suffix _-ify_, meaning "to make" or "to cause to become".
@@ -80,7 +82,3 @@ Here are a few ways you can help:
 - [ ] Retain the formatting (e.g. spacing) of the original .bib file.
 - [ ] Improve the matching heuristic. 
 - [ ] Wrap the tool in a browser extension so it can be used directly from Overleaf.
-
-## License
-
-`dblpify` is available under the MIT license. See the LICENSE file for more info.
